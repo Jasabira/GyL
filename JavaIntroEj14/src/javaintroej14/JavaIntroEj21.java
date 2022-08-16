@@ -8,12 +8,116 @@ la matriz M en la cual empieza el primer elemento de la submatriz P.
  */
 package javaintroej14;
 
+import java.util.*;
+
 
 public class JavaIntroEj21 {
 
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        LinkedList<Integer> li = new LinkedList<>();
+        // Creando matriz
+        int [][] matrizM = new int[10][10];
+        int [][] matrizP = new int[3][3];
+        
+        int filaC = 0;
+        int columnaC = 0;
+        
+        llenarMatrizM(matrizM);
+        llenarMatrizP(matrizP);
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                for (int k = 0; k < 3; k++) {
+                    for (int l = 0; l < 3; l++) {
+                        
+                    }
+                }
+            }
+        }
+        
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (matrizM[i][j] == matrizP[0][0]) {
+                    filaC = i;
+                    columnaC = j;
+                    System.out.print("[" + filaC + "," + columnaC + "]");
+                    if (matrizM[i][j] == matrizP[0][1]) {
+                        filaC = i;
+                        columnaC = j;
+                        System.out.print("[" + filaC + "," + columnaC + "]");
+                        if (matrizM[i][j] == matrizP[0][2]) {
+                            filaC = i;
+                            columnaC = j;
+                            System.out.print("[" + filaC + "," + columnaC + "]");
+                            if (matrizM[i][j] == matrizP[1][0]) {
+                                filaC = i;
+                                columnaC = j;
+                                System.out.print("[" + filaC + "," + columnaC + "]");
+                                if (matrizM[i][j] == matrizP[1][1]) {
+                                    filaC = i;
+                                    columnaC = j;
+                                    System.out.print("[" + filaC + "," + columnaC + "]");
+                                    if (matrizM[i][j] == matrizP[1][2]) {
+                                        filaC = i;
+                                        columnaC = j;
+                                        System.out.print("[" + filaC + "," + columnaC + "]");
+                                        if (matrizM[i][j] == matrizP[2][0]) {
+                                            filaC = i;
+                                            columnaC = j;
+                                            System.out.print("[" + filaC + "," + columnaC + "]");
+                                            if (matrizM[i][j] == matrizP[2][1]) {
+                                                filaC = i;
+                                                columnaC = j;
+                                                System.out.print("[" + filaC + "," + columnaC + "]");
+                                                if (matrizM[i][j] == matrizP[2][2]) {
+                                                    filaC = i;
+                                                    columnaC = j;
+                                                    System.out.print("[" + filaC + "," + columnaC + "]");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        
+        
+        
+    }
+    
+    public static int[][] llenarMatrizM(int matrizM[][]){
+        Scanner leer = new Scanner(System.in);
+        
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                //System.out.println("Coloca un numero para la posicion " + "[" + i +","+ j + "]");
+                //matrizM[i][j] = leer.nextInt();
+                matrizM[i][j] = (int) (Math.random() * 9+1);
+            }
+        }
+        return matrizM;
+    }
+    
+    public static int[][] llenarMatrizP(int matrizP[][]){
+        Scanner leer = new Scanner(System.in);
+        
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                //System.out.println("Coloca un numero para la posicion " + "[" + i +","+ j + "]");
+                //matrizM[i][j] = leer.nextInt();
+                matrizP[i][j] = (int) (Math.random() * 9+1);
+            }
+        }
+        return matrizP;
     }
     
 }
