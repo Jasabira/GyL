@@ -23,6 +23,8 @@ public class JavaIntroExtra07 {
         
         nuevo = n;
         System.out.println("Escribe los numeros");
+        
+        //metodo con for
         /*for (int i = 0; i < n; i++) {
             num = leer.nextInt();
             if (num>nMayor) {
@@ -34,6 +36,8 @@ public class JavaIntroExtra07 {
             total = total + num;
         }*/
         
+        
+        //Metodo con while
         /*while (n>=0) {
             num = leer.nextInt();
             if (num>nMayor) {
@@ -47,7 +51,8 @@ public class JavaIntroExtra07 {
             total = total + num;
         }*/
         
-        do {
+        //Metodo con do while
+        /*do {
             num = leer.nextInt();
             if (num>nMayor) {
                 nMayor = num;
@@ -58,7 +63,7 @@ public class JavaIntroExtra07 {
                 n--;
             }
             total = total + num;
-        } while (n>=0);
+        } while (n>=0);*/
         
         int promedio = total / nuevo;
         

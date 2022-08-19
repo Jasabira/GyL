@@ -8,14 +8,11 @@ la matriz M en la cual empieza el primer elemento de la submatriz P.
  */
 package javaintroej14;
 
-import java.util.*;
-
 
 public class JavaIntroEj21 {
 
     
     public static void main(String[] args) {
-        LinkedList<Integer> push = new LinkedList<>();
         
         // Creando matriz
         int [][] matrizM = {
@@ -36,83 +33,30 @@ public class JavaIntroEj21 {
             {3,2,1}
         };
         
-        //llenarMatrizM(matrizM);
-        //llenarMatrizP(matrizP);
+        int c = 0;
+        int d = 0;
+        boolean bandera = false;
 
-        /*for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                for (int h = 0; h < 3; h++) {
-                    for (int k = 0; k < 3; k++) {
-                        
-                        if (Arrays.deepEquals(matrizM, matrizP)) {
-                            
-                            System.out.println("found in matriz");
-                        }
-                    }  
-                }
-            }
-        }*/
-        
-        /*for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
                 if (matrizM[i][j] == matrizP[0][0]) {
-                    if (matrizM[i+2][j] == matrizP[2][j] && matrizM[i][j+2] == matrizP[i][2]) {
-                        for (int k = 0; k < 3; k++) {
-                            for (int l = 0; l < 3; l++) {
-                                if (matrizP[k][l] == matrizM[i][j]) {
-                                    System.out.print("[" + i + "," + j + "]");
-                                }
+                    bandera = true;
+                    c = i;
+                    d = j;
+                    for (int k = 0; k < 3; k++) {
+                        for (int l = 0; l < 3; l++) {
+                            if (matrizP[k][l] != matrizM[i+k][j+l]) {
+                                bandera = false;
+                                break;
                             }
                         }
-                    }  
-                }
-            }
-        }*/
-        
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (
-                        matrizM[i][j] == matrizP[0][0] && matrizM[i+1][j] == matrizP[0][1] && matrizM[i+2][j] == matrizP[0][2]&&
-                        matrizM[i][j] == matrizP[1][0] && matrizM[i+1][j] == matrizP[1][1] && matrizM[i+2][j] == matrizP[1][2]&&
-                        matrizM[i][j] == matrizP[2][0] && matrizM[i+1][j] == matrizP[2][1] && matrizM[i+2][j] == matrizP[2][2]
-                        ){
-                    System.out.println("[" + i + "," + j + "]");
+                    }
                 }
             }
         }
         
-    }
-    
-    /*public static int[][] llenarMatrizM(int matrizM[][]){
-        Scanner leer = new Scanner(System.in);
-        
-        
-
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                //System.out.println("Coloca un numero para la posicion " + "[" + i +","+ j + "]");
-                //matrizM[i][j] = leer.nextInt();
-                matrizM[i][j] = (int) (Math.random() * 9+1);
-                System.out.print("[" + matrizM[i][j] + "] ");
-            }
-            System.out.println("");
+        if (bandera = true) {
+            System.out.println("La matriz se encuentra en la posicion inial: "+ "[" + c + "," + d + "]");
         }
-        return matrizM;
     }
-    
-    public static int[][] llenarMatrizP(int matrizP[][]){
-        Scanner leer = new Scanner(System.in);
-        
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                //System.out.println("Coloca un numero para la posicion " + "[" + i +","+ j + "]");
-                //matrizM[i][j] = leer.nextInt();
-                matrizP[i][j] = (int) (Math.random() * 9+1);
-                System.out.print("[" + matrizP[i][j] + "] ");
-            }
-             System.out.println("");
-        }
-        return matrizP;
-    }*/
-    
 }
