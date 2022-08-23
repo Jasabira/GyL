@@ -17,10 +17,10 @@ public class JavaIntroExtra01 {
         int horas = 0;
         int minutos = 0;
         
-        while(tiempoMin>0){
-            if (tiempoMin >= 1140) {
+        while(tiempoMin>=0){
+            if (tiempoMin >= 1440) {
                 dias = dias + 1;
-                tiempoMin = tiempoMin - 1140;
+                tiempoMin = tiempoMin - 1440;
             } else if(tiempoMin >= 60){
                 horas = horas + 1;
                 tiempoMin = tiempoMin - 60;
