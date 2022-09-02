@@ -72,20 +72,20 @@ public class Operacion {
     }
     
     public void calcularMultiplicacion(int numero1, int numero2){
-        if (numero1 != 0 || numero2 != 0) {
+        if (numero1 == 0 || numero2 == 0) {
+            System.out.println("ERROR: Resultado 0");
+        }else{
             int multiplicacion = numero1 * numero2;
             System.out.println(multiplicacion);
-        }else{
-            System.out.println("ERROR: Resultado 0");
         }
     }
     
     public void calcularDivision(int numero1, int numero2){
-        if (numero1 != 0 || numero2 != 0) {
-            int division = numero1 / numero2;
-            System.out.println(division);
-        }else{
+        if (numero1 == 0 || numero2 == 0) {
             System.out.println("ERROR: Resultado 0");
+        }else{
+            int multiplicacion = numero1 / numero2;
+            System.out.println(multiplicacion);
         }
     }
 

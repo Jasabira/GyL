@@ -55,8 +55,4 @@ public class Rectangulo {
     public String toString() {
         return "Rectangulo{" + "base=" + base + ", altura=" + altura + '}';
     }
-    
-    
-    
-    
 }
