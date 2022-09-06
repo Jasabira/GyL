@@ -17,10 +17,27 @@ h) Método consultarDatos(): permitirá mostrar todos los datos de la cuenta
  */
 package pooej05;
 
+import Entidad.Cuenta;
+import ServicioCuenta.ServicioCuenta;
+
 
 public class POOEj05 {
 
     public static void main(String[] args) {
+        ServicioCuenta servicio1 = new ServicioCuenta();
+        Cuenta nuevaCuenta = servicio1.crearCuenta();
+        
+        //System.out.println(nuevaCuenta.toString());
+        //nuevaCuenta.ingresar(1000);
+        //System.out.println(nuevaCuenta.getSaldoActual());
+        //nuevaCuenta.retirar(500);
+        //System.out.println(nuevaCuenta.getSaldoActual());
+        //nuevaCuenta.extraccionRapida();
+        //System.out.println(nuevaCuenta.getSaldoActual());
+        nuevaCuenta.consultarDatos();
+        nuevaCuenta.consultarSaldo();
+        nuevaCuenta.ingresar(3000);
+        nuevaCuenta.consultarSaldo();
         
     }
     
