@@ -12,10 +12,23 @@ Antes de calcular la raíz cuadrada se debe obtener el valor absoluto del númer
 */
 package pooej09;
 
+import Entidad.Matematica;
+
 public class POOEj09 {
 
     public static void main(String[] args) {
+        Matematica m1 = new Matematica();
         
+        m1.setNumero1((double) (Math.random()*10 +1));
+        m1.setNumero2((double) (Math.random()*10 +1));
+        
+        System.out.println(m1.toString());
+        
+        m1.devolverMayor();
+        
+        m1.calcularPotencia();
+        
+        m1.calcularRaiz();
     }
     
 }
