@@ -40,5 +40,21 @@ public class Matematica {
         this.numero2 = numero2;
     }
     
+    //METODOS
     
+    public void devolverMayor(){
+        int numeroMenor = 0;
+        if (numero1 < numero2) {
+            numeroMenor = numero1;
+        }
+        System.out.println("El numero menor es: " + numeroMenor ); 
+    }
+    
+    public void calcularPotencia(){
+
+    }
+    
+    public void calcularRaiz(){
+    
+    }
 }
