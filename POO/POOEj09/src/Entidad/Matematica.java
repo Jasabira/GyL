@@ -43,27 +43,29 @@ public class Matematica {
     //METODOS
     
     public void devolverMayor(){
-        double numeroMenor = 0;
-        if (numero1 < numero2) {
-            numeroMenor = numero1;
+        double numeroMayor = 0;
+        if (numero1 > numero2) {
+            numeroMayor = numero1;
         }else{
-            numeroMenor = numero2;
+            numeroMayor = numero2;
         }
-        System.out.println("El numero menor es: " + numeroMenor ); 
+        System.out.println("El numero mayor es: " + numeroMayor ); 
     }
     
     public void calcularPotencia(){
-        double numeroMenor = 0;
-        double numeroMayor = 0;
-        if (numero1 < numero2) {
-            numeroMenor = Math.abs(numero1);
-            numeroMayor = Math.abs(numero2);
+        int numero1R = (int) Math.abs(numero1);
+        int numero2R = (int) Math.abs(numero2);
+        int numeroMenor = 0;
+        int numeroMayor = 0;
+        if (numero1R < numero2R) {
+            numeroMenor = numero1R;
+            numeroMayor = numero2R;
         }else{
-            numeroMenor = Math.abs(numero2);
-            numeroMayor = Math.abs(numero1);
+            numeroMenor = numero2R;
+            numeroMayor = numero1R;
         }
         
-        int elevacion = (int) Math.pow(numeroMayor, numeroMenor);
+        double elevacion = (double) Math.pow(numeroMayor, numeroMenor);
         
         System.out.println("El resultado de la elevacion es: " + elevacion);
         
