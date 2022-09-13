@@ -52,17 +52,39 @@ public class Persona {
     public Persona crearPersona(){
         Scanner leer = new Scanner(System.in);
         Date date = new Date();
-        Persona p1 = new Persona();
         
         System.out.println("Coloque el nombre");
-        p1.setNombre(leer.next());
+        nombre = (leer.next());
         System.out.println("Coloque fecha de nacimiento dd/mm/aa");
         date.setDate(leer.nextInt());
         date.setMonth(leer.nextInt()-1);
         date.setYear(leer.nextInt()-1900);
-        p1.setFechaDeNacimiento(date);
+        fechaDeNacimiento = date;
         
-        return p1;
+        return new Persona();
+    }
+    
+    public int calcularEdad(){
+        Date fechaActual = new Date();
+        int edad;
+        edad = fechaDeNacimiento.getYear() - fechaActual.getYear();
+        
+        return Math.abs(edad);
+    }
+    
+    public boolean menorQue(int edad){
+        Date fechaActual = new Date();
+        boolean band;
+        int edadMiPersona = fechaDeNacimiento.getYear() - fechaActual.getYear();
+        edadMiPersona= Math.abs(edadMiPersona);
+        
+        band = edadMiPersona < edad;
+        return band;
+    }
+    
+    public void mostrarPersona(){
+        System.out.println("El nombre es: " + nombre);
+        System.out.println("Su edad es: " + calcularEdad() + " años.");
     }
 
     @Override

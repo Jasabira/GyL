@@ -23,10 +23,14 @@ public class POOEj12 {
     public static void main(String[] args) {
         
         Persona personita1 = new Persona();
-        Persona personita2 = new Persona();
+        //Persona personita2 = new Persona();
         
         personita1.crearPersona();
-        personita2.crearPersona();
+        personita1.mostrarPersona();
+        
+        System.out.println(personita1.menorQue(25));
+        
+       
         
         
         
