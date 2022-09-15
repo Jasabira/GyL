@@ -14,19 +14,59 @@ de DNI por 23 (el resultado debe ser un número entre 0 y 22). El método debe b
 un array (vector) de caracteres la posición que corresponda al resto de la división para
 obtener la letra correspondiente. La tabla de caracteres es la siguiente:
  */
-package pooej16;
+package Entidad;
 
-import Entidad.NIF;
+import java.util.Scanner;
 
-public class POOEj16 {
+public class NIF {
+    private long DNI;
+    private char letra;
 
-    public static void main(String[] args) {
+    public NIF() {
+    }
+
+    public NIF(long DNI, char letra) {
+        this.DNI = DNI;
+        this.letra = letra;
+    }
+
+    public long getDNI() {
+        return DNI;
+    }
+
+    public void setDNI(long DNI) {
+        this.DNI = DNI;
+    }
+
+    public char getLetra() {
+        return letra;
+    }
+
+    public void setLetra(char letra) {
+        this.letra = letra;
+    }
+
+    public NIF crearNIF(){
+        Scanner leer = new Scanner(System.in);
         
-        NIF n1 = new NIF();
+        System.out.println("Coloque su numero de DNI: ");
+        DNI = leer.nextLong();
+        letra = calcularLetra();
         
-        n1.crearNIF();
-        n1.mostrarNIF();
+        return new NIF();
+    }
+    
+    public char calcularLetra(){
+        int posicion = (int) (DNI % 23);
         
+        char[] vectorLetra = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
+        char letrita = vectorLetra[posicion];
+        System.out.println(posicion);
+        return letrita;
+    }
+    
+    public void mostrarNIF(){
+        System.out.println("El NIF es: " + DNI + "-" + letra);
     }
     
 }
