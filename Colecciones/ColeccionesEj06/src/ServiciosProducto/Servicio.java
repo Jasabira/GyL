@@ -13,6 +13,7 @@ import Entidad.Producto;
 import java.util.*;
 
 public class Servicio {
+
     private final Scanner leer;
     private final HashMap<String, Integer> listaProductos;
 
@@ -20,20 +21,20 @@ public class Servicio {
         this.leer = new Scanner(System.in).useDelimiter("\n");
         this.listaProductos = new HashMap<>();
     }
-    
-    public void crearProducto(){
+
+    public void crearProducto() {
         String res;
         while (true) {
             Producto nuevoProducto = new Producto();
-        
-        System.out.println("Ingrese el nombre del producto");
-        String clave = leer.next();
-        System.out.println("Ingrese el precio del producto");
-        int valor = leer.nextInt();
-        
-        nuevoProducto.setNombre(clave);
-        nuevoProducto.setPrecio(valor);
-        listaProductos.put(clave, valor);
+
+            System.out.println("Ingrese el nombre del producto");
+            String clave = leer.next();
+            System.out.println("Ingrese el precio del producto");
+            int valor = leer.nextInt();
+
+            nuevoProducto.setNombre(clave);
+            nuevoProducto.setPrecio(valor);
+            listaProductos.put(clave, valor);
             System.out.println("Quiere crear otro producto?");
             res = leer.next();
             if (res.equals("no")) {
@@ -42,7 +43,7 @@ public class Servicio {
             }
         }
     }
-    
+
     public void modificarPrecio() {
         System.out.println("Ingrese el producto a modificar");
         String producto = leer.next();
@@ -55,51 +56,48 @@ public class Servicio {
         }
         mostrarProductos();
     }
-    
-    public void eliminarProducto(){
+
+    public void eliminarProducto() {
         System.out.println("Ingrese el producto a eliminar");
         String producto = leer.next();
-        
+
         if (listaProductos.containsKey(producto)) {
             listaProductos.remove(producto);
         }
         mostrarProductos();
     }
-    
-    public void mostrarProductos(){
+
+    public void mostrarProductos() {
         System.out.println("Los productos son: ");
-        
+
         for (Map.Entry<String, Integer> aux : listaProductos.entrySet()) {
             System.out.println(aux);
         }
         menu();
     }
-    
-    public void menu(){
+
+    public void menu() {
         System.out.println("MENU");
         System.out.println("1) introducir producto");
         System.out.println("2) modificar precio");
         System.out.println("3) eliminar un producto");
         System.out.println("4) mostrar productos");
         int var = leer.nextInt();
-        
+
         switch (var) {
-            case 1:
+            case 1 ->
                 crearProducto();
-                break;
-            case 2:
+            case 2 ->
                 modificarPrecio();
-                break;
-            case 3:
+            case 3 ->
                 eliminarProducto();
-                break;
-            case 4:
+            case 4 ->
                 mostrarProductos();
-                break;
-            default:
+            default -> {
                 System.out.println("Opcion invalida");
-                break;
+                menu();
+            }
         }
     }
-    
+
 }

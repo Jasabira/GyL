@@ -12,12 +12,9 @@ package coleccionesej06;
 import ServiciosProducto.Servicio;
 
 public class ColeccionesEj06 {
-
     public static void main(String[] args) {
         Servicio servPro = new Servicio();
         
         servPro.menu();
-        
     }
-    
 }
