@@ -18,7 +18,7 @@ import java.util.*;
 
 public class ServicioPais {
     private final Scanner leer;
-    private final HashSet<String> listaPaises;
+    private final HashSet<Pais> listaPaises;
 
     public ServicioPais() {
         this.leer = new Scanner(System.in).useDelimiter("\n");
@@ -31,26 +31,26 @@ public class ServicioPais {
         System.out.println("Ingrese el nombre del pais");
         String paisito = leer.next();
         nuevoPais.setNombrePais(paisito);
-        listaPaises.add(paisito);
+        listaPaises.add(nuevoPais);
             
         return nuevoPais;
     }
     
     public void mostrarLista(){
         System.out.println("\nLISTA DE LOS PAISES");
-        for(String aux : listaPaises){
+        for(Pais aux : listaPaises){
             System.out.println(aux);
         }
         System.out.println("\n");
     } 
     
     public void buscarPais(){
-        Iterator<String> it = listaPaises.iterator();
+        Iterator<Pais> it = listaPaises.iterator();
         System.out.println("Ingresa el pais a buscar y borrar");
         String nombrePaisABorrar = leer.next();
         boolean band = true;
         while (it.hasNext()) {
-            if (it.next().equals(nombrePaisABorrar)) {
+            if (it.next().getNombrePais().contains(nombrePaisABorrar)) {
                 it.remove();
                 break;
             }else{

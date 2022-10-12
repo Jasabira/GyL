@@ -85,14 +85,10 @@ public class Servicio {
         int var = leer.nextInt();
 
         switch (var) {
-            case 1 ->
-                crearProducto();
-            case 2 ->
-                modificarPrecio();
-            case 3 ->
-                eliminarProducto();
-            case 4 ->
-                mostrarProductos();
+            case 1 -> crearProducto();
+            case 2 -> modificarPrecio();
+            case 3 -> eliminarProducto();
+            case 4 -> mostrarProductos();
             default -> {
                 System.out.println("Opcion invalida");
                 menu();
