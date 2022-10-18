@@ -15,20 +15,10 @@ import Servicio.Servicios;
 public class RelacionesEj01 {
 
     public static void main(String[] args) {
-//        Perro perro1 = new Perro();
-//        perro1.setNombre("Linda");
-//        perro1.setRaza("Poddle");
-//        perro1.setEdad(15);
-//        perro1.setTamaño("pequeño");
-//        
-//        Persona persona1 = new Persona();
-//        persona1.setNombre("Jasbir");
-//        persona1.setApellido("Singh");
-//        persona1.setEdad(26);
-//        persona1.setDocumento(95898897);
-//        persona1.setPerro(perro1);
-
-
+        //Perro perro1 = new Perro("Linda", "Poddle", 15, "pequeño");
+      
+        //Persona persona1 = new Persona("Jasbir", "Singh", 26, 95898897, perro1);
+        
         Servicios serv = new Servicios();
         
         Perro pe1 = serv.crearPerro();
