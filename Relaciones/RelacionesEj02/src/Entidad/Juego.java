@@ -53,7 +53,6 @@ public class Juego {
                     si = false;
                     System.out.println(i.toString());
                     break;
-                    
                 }
                 System.out.println(i.toString());
             }

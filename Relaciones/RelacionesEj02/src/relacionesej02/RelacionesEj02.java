@@ -47,15 +47,16 @@ public class RelacionesEj02 {
         RevolverDeAgua re = new RevolverDeAgua();
         Juego j1 = new Juego();
         
-        
+        //Crea lista
         HashSet<Jugador> lista = new HashSet();
+        //Llena revolver ahr
         re.llenarRevolver();
         
         //Creando jugadores
         for (int i = 1; i <= 6; i++) {
             Jugador j = new Jugador();
             j.setId(i);
-            j.setNombre("Jugador" + i);
+            j.setNombre("Jugador " + i);
             lista.add(j);
         }
         
@@ -63,7 +64,6 @@ public class RelacionesEj02 {
         j1.llenarJuego(lista, re);
         
         j1.ronda();
-        
         
         
         

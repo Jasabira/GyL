@@ -49,7 +49,6 @@ public class RevolverDeAgua {
     }
     
     public void siguienteChorro(){
-        System.out.println(posicionActual);
         if (posicionActual == 6 && posicionAgua != 6) {
             setPosicionActual(1);
         }else{
