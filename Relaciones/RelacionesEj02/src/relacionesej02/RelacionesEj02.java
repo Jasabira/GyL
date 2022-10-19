@@ -60,7 +60,7 @@ public class RelacionesEj02 {
             lista.add(j);
         }
         
-        //
+        
         j1.llenarJuego(lista, re);
         
         j1.ronda();
