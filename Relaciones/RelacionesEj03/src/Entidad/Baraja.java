@@ -38,7 +38,9 @@ public class Baraja {
 
     private void crearBaraja() {
         String[] palos = Carta.Palos;
+        //Recorre PALOS
         for (int i = 0; i < palos.length; i++) {
+            //REcorre Numeros
             for (int j = 0; j < Carta.limiteCartaPalo; j++) {
                 if (!(j == 7 || j == 8)) {
                     if (j >= 9) {

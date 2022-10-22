@@ -20,11 +20,12 @@ public class RelacionesEj01 {
         //Persona persona1 = new Persona("Jasbir", "Singh", 26, 95898897, perro1);
         
         Servicios serv = new Servicios();
+        serv.menu();
+         
+        //serv.crearPerro();
+        //serv.crearPersona();
         
-        Perro pe1 = serv.crearPerro();
-        Persona p1 = serv.crearPersona(pe1);
-        
-        System.out.println(p1.toString());
+        //System.out.println(p1.toString());
         
     }
     
