@@ -8,8 +8,6 @@ la clase Persona, la información del Perro y de la Persona.
  */
 package relacionesej01;
 
-import Entidad.Perro;
-import Entidad.Persona;
 import Servicio.Servicios;
 
 public class RelacionesEj01 {
