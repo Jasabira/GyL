@@ -52,11 +52,12 @@ public class Televisor extends Electrodomestico {
             this.precio = super.precioFinal() * 1.30 + 500;
         }else if(TDT){
             this.precio = super.precioFinal() + 500;
+        }else if(getResolucion() > 40){
+            this.precio = super.precioFinal() * 1.30;
         }else{
             this.precio = super.precioFinal();
         }
-        
-        return 0;
+        return precio;
     }
     
     @Override

@@ -13,7 +13,7 @@ public class Electrodomestico {
     }
 
     public Electrodomestico(double precio, String color, char consumoEnergetico, double peso) {
-        this.precio = precio;
+        this.precio = 1000;
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
@@ -86,9 +86,6 @@ public class Electrodomestico {
     public void crearElectrodomestico(){
         Scanner leer = new Scanner(System.in);
         
-        double costo = 1000;
-        setPrecio(costo);
-        
         System.out.println("Ingrese el color");
         String colorsito = leer.next();
         setColor(comprobarColor(colorsito));
@@ -108,120 +105,120 @@ public class Electrodomestico {
         
     public double precioFinal(){
         getConsumoEnergetico();
-        double precioFinaloso = 0;
+        double precioF = 0;
         switch (getConsumoEnergetico()) {
             case 'A' -> {
                 if (getPeso() >= 1 && getPeso() <= 19) {
-                    precioFinaloso = getPrecio() + 1000 + 100;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 1000 + 100;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 20 && getPeso() <= 49){
-                    precioFinaloso = getPrecio() + 1000 + 500;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 1000 + 500;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 50 && getPeso() <= 79){
-                    precioFinaloso = getPrecio() + 1000 + 800;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 1000 + 800;
+                    setPrecio(precioF);
+                    return precioF;
                 }else{
-                    precioFinaloso = getPrecio() + 1000 + 1000;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 1000 + 1000;
+                    setPrecio(precioF);
+                    return precioF;
                 }
             }
             case 'B' -> {
                 if (getPeso() >= 1 && getPeso() <= 19) {
-                    precioFinaloso = getPrecio() + 800 + 100;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 800 + 100;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 20 && getPeso() <= 49){
-                    precioFinaloso = getPrecio() + 800 + 500;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 800 + 500;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 50 && getPeso() <= 79){
-                    precioFinaloso = getPrecio() + 800 + 800;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 800 + 800;
+                    setPrecio(precioF);
+                    return precioF;
                 }else{
-                    precioFinaloso = getPrecio() + 800 + 1000;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 800 + 1000;
+                    setPrecio(precioF);
+                    return precioF;
                 }
             }
             case 'C' -> {
                 if (getPeso() >= 1 && getPeso() <= 19) {
-                    precioFinaloso = getPrecio() + 600 + 100;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 600 + 100;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 20 && getPeso() <= 49){
-                    precioFinaloso = getPrecio() + 600 + 500;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 600 + 500;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 50 && getPeso() <= 79){
-                    precioFinaloso = getPrecio() + 600 + 800;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 600 + 800;
+                    setPrecio(precioF);
+                    return precioF;
                 }else{
-                    precioFinaloso = getPrecio() + 600 + 1000;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 600 + 1000;
+                    setPrecio(precioF);
+                    return precioF;
                 }
             }
             case 'D' -> {
                 if (getPeso() >= 1 && getPeso() <= 19) {
-                    precioFinaloso = getPrecio() + 500 + 100;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 500 + 100;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 20 && getPeso() <= 49){
-                    precioFinaloso = getPrecio() + 500 + 500;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 500 + 500;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 50 && getPeso() <= 79){
-                    precioFinaloso = getPrecio() + 500 + 800;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 500 + 800;
+                    setPrecio(precioF);
+                    return precioF;
                 }else{
-                    precioFinaloso = getPrecio() + 500 + 1000;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 500 + 1000;
+                    setPrecio(precioF);
+                    return precioF;
                 }
             }
             case 'E' -> {
                 if (getPeso() >= 1 && getPeso() <= 19) {
-                    precioFinaloso = getPrecio() + 300 + 100;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 300 + 100;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 20 && getPeso() <= 49){
-                    precioFinaloso = getPrecio() + 300 + 500;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 300 + 500;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 50 && getPeso() <= 79){
-                    precioFinaloso = getPrecio() + 300 + 800;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 300 + 800;
+                    setPrecio(precioF);
+                    return precioF;
                 }else{
-                    precioFinaloso = getPrecio() + 300 + 1000;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 300 + 1000;
+                    setPrecio(precioF);
+                    return precioF;
                 }
             }
             case 'F' -> {
                 if (getPeso() >= 1 && getPeso() <= 19) {
-                    precioFinaloso = getPrecio() + 100 + 100;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 100 + 100;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 20 && getPeso() <= 49){
-                    precioFinaloso = getPrecio() + 100 + 500;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 100 + 500;
+                    setPrecio(precioF);
+                    return precioF;
                 }else if(getPeso() >= 50 && getPeso() <= 79){
-                    precioFinaloso = getPrecio() + 100 + 800;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 100 + 800;
+                    setPrecio(precioF);
+                    return precioF;
                 }else{
-                    precioFinaloso = getPrecio() + 100 + 1000;
-                    setPrecio(precioFinaloso);
-                    return precioFinaloso;
+                    precioF = getPrecio() + 100 + 1000;
+                    setPrecio(precioF);
+                    return precioF;
                 }
             }
             default -> System.out.println("Letra incorrecta");

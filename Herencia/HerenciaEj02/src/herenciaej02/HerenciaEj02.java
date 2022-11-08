@@ -1,36 +1,37 @@
-
 package herenciaej02;
 
 import Entidad.Electrodomestico;
 import Entidad.Lavadora;
 import Entidad.Televisor;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class HerenciaEj02 {
 
     public static void main(String[] args) {
+
+        List<Electrodomestico> lista = new ArrayList();
+        Lavadora e2 = new Lavadora(31, 0, "blanco", 'A', 40); //3000
+        Lavadora e1 = new Lavadora(20, 0, "negro", 'C', 81); //2600
+        Televisor e4 = new Televisor(41, false, 0, "negro", 'A', 21);//3250
+        Televisor e3 = new Televisor(20, true, 0, "negro", 'F', 3);//1700
         
-        //Electrodomestico e1 = new Electrodomestico();
-        //e1.crearElectrodomestico();
+        lista.add(e2);
+        lista.add(e1);
+        lista.add(e4);
+        lista.add(e3);
         
-        Lavadora e1 = new Lavadora();
-        e1.crearLavadora();
-        e1.precioFinal();
-        System.out.println(e1.toString());
+        double precioso = 0;
+        for (Electrodomestico aux : lista) {
+            aux.precioFinal();
+            precioso += aux.getPrecio();
+            System.out.println(aux.toString());
+        }
         
-//        Lavadora e2 = new Lavadora();
-//        e2.crearLavadora();
-//        e2.precioFinal();
-//        System.out.println(e2.toString());
-        
-        Televisor t1 = new Televisor();
-        t1.crearTelevisor();
-        t1.precioFinal();
-        System.out.println(t1.toString());
-        
-//        Televisor t2 = new Televisor();
-//        t2.crearTelevisor();
-//        t2.precioFinal();
-//        System.out.println(t2.toString());
+        System.out.println("PRECIO DE LOS " + lista.size() + " ELECTRODOMESTICOS ES DE: " + precioso + "$");
+
+
     }
-    
+
 }
