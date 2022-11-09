@@ -4,7 +4,6 @@ import Entidad.Electrodomestico;
 import Entidad.Lavadora;
 import Entidad.Televisor;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class HerenciaEj02 {
@@ -30,8 +29,6 @@ public class HerenciaEj02 {
         }
         
         System.out.println("PRECIO DE LOS " + lista.size() + " ELECTRODOMESTICOS ES DE: " + precioso + "$");
-
-
     }
 
 }
