@@ -10,7 +10,7 @@ public class HerenciaEj04 {
     public static void main(String[] args) {
         
         Circulo c2 = new Circulo(2,4);
-        Rectangulo r2 = new Rectangulo(4,8);
+        Rectangulo r2 = new Rectangulo(2,4);
         
         
         System.out.println("El area de c1 es: " + c2.calculaArea() + " y el perimetro es: " + c2.calculaPerimetro());
