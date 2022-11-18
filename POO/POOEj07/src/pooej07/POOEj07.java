@@ -8,6 +8,11 @@ Por último, guardaremos los resultados de los métodos calcularIMC y esMayorDeE
 distintas variables, para después en el main, calcular un porcentaje de esas 4 personas
 cuantas están por debajo de su peso, cuantas en su peso ideal y cuantos, por encima, y
 también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menores.
+
+
+Inicializar un objeto de la clase Persona ejercicio 7 de la guía POO, a null y tratar de invocar el
+método esMayorDeEdad() a través de ese objeto. Luego, englobe el código con una cláusula
+try-catch para probar la nueva excepción que debe ser controlada.
  */
 package pooej07;
 
@@ -20,26 +25,17 @@ public class POOEj07 {
     public static void main(String[] args) {
         ServicioPersona sp = new ServicioPersona();
         
-        Persona p1 = sp.crearPersona();
-        //Persona p2 = sp.crearPersona();
-        //Persona p3 = sp.crearPersona();
-        //Persona p4 = sp.crearPersona();
+//        Persona p1 = sp.crearPersona();
+//        System.out.println(sp.esMayorDeEdad(p1));
+//        System.out.println(sp.calcularIMC(p1));
         
+        try{
+        Persona p2 = null;
+        sp.esMayorDeEdad(p2);
         
-        System.out.println(sp.esMayorDeEdad(p1));
-        System.out.println(sp.calcularIMC(p1));
-        
-        
-        //sp.esMayorDeEdad(p2);
-        //sp.calcularIMC(p2);
-        
-        //sp.esMayorDeEdad(p3);
-        //sp.calcularIMC(p3);
-        
-        //sp.esMayorDeEdad(p4);
-        //sp.calcularIMC(p4);
-        
-        
+        }catch(NullPointerException e){
+            System.out.println(e.getMessage());
+        }
     }
     
 }
